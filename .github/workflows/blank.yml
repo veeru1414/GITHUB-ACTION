@@ -4,22 +4,20 @@ on:
     branches:
       - main
 jobs:
-  execute-script:
-    runs-on: self-hosted
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Execute script
-        shell: bash
-        id: execute-script
-        continue-on-error: true
-        run: sh /home/bandaru/git-act/script.sh
-        
+  example-job:
+   runs-on: self-hosted
+   steps:
+     - name: Run build script
+       shell: bash
+       id: execute-script
+       continue-on-error: true
+       run: sh /home/bandaru/git-act/scripts.sh
+               
          echo "::set-output name=exit-code::$?"
 
-      - name: Take action based on exit codes
-        if: ${{ steps.execute-script.outputs.exit-code == '0' }}
-        run: echo "Script succeeded"
-      - name: Notify on failure
-        if: ${{ steps.execute-script.outputs.exit-code != '0' }}
-        run: echo "Script failed"
+     - name: Take action based on exit codes
+       if: ${{ steps.execute-script.outputs.exit-code == '0' }}
+       run: echo "Script succeeded"
+     - name: Notify on failure
+       if: ${{ steps.execute-script.outputs.exit-code != '0' }}
+       run: echo "Script failed"
