@@ -1,8 +1,5 @@
 name: execute-Script
-on:
-  push:
-    branches:
-      - main
+on: push
 jobs:
   example-job:
    runs-on: myselfrun-1
@@ -18,6 +15,4 @@ jobs:
      - name: Take action based on exit codes
        if: ${{ steps.execute-script.outputs.exit-code == '0' }}
        run: echo "Script succeeded"
-     - name: Notify on failure
-       if: ${{ steps.execute-script.outputs.exit-code != '0' }}
-       run: echo "Script failed"
+     - name: Notify on failur
