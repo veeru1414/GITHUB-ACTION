@@ -1,8 +1,5 @@
 name: java&git-vers
-on:
-  push:
-    branches:
-      - main
+on: push
 jobs:
   example-job:
    runs-on: myselfrun-1
