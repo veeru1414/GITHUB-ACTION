@@ -1,0 +1,16 @@
+name: java&git-version
+on:
+  push:
+    branches:
+      - main
+jobs:
+  example-job:
+   runs-on: myselfrun-1
+   steps:
+     - name: Run build script
+       shell: bash
+       id: execute-script
+       continue-on-error: true
+       run: |
+          java -version
+          git version
