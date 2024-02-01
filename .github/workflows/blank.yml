@@ -11,7 +11,7 @@ jobs:
        shell: bash
        id: execute-script
        continue-on-error: true
-       run: sh /home/bandaru/git-act/scripts.sh
+       run: sh /home/ubuntu/git-act/scripts.sh
                
          echo "::set-output name=exit-code::$?"
 
