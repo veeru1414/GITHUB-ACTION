@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   example-job:
-   runs-on: myselfrunner
+   runs-on: myselfrun-1
    steps:
      - name: Run build script
        shell: bash
