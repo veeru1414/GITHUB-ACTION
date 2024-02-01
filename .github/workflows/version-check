@@ -1,4 +1,4 @@
-name: java&git-version
+name: java&git-vers
 on:
   push:
     branches:
