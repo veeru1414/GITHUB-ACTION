@@ -2,7 +2,7 @@ name: CI/CD Pipeline
 on: push
 jobs:
   build:
-    runs-on: myselfrun-1   
+    runs-on: ubuntu-latest  
     steps:
     - name: Check out the code
       uses: actions/checkout@v2
