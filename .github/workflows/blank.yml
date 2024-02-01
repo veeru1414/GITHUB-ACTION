@@ -1,4 +1,4 @@
-name: Execute Script
+name: execute Script
 on:
   push:
     branches:
