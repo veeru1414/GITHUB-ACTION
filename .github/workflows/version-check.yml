@@ -1,5 +1,8 @@
 name: java&git-vers
-on: push
+on:
+  branch_protection_rule:
+    types:
+      - edited
 jobs:
   example-job:
    runs-on: myselfrun-1
